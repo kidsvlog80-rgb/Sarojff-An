@@ -1,0 +1,6 @@
+{
+  "name": "Drago Predictor 4.0",
+  "description": "High-fidelity, smooth cyberpunk game assistant and predictor featuring dynamic live estimations, cyber animation matrices, and telegram integration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

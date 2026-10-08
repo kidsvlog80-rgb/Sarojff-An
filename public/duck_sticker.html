@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent !important;
+    overflow: hidden;
+  }
+  #sticker {
+    width: 100%;
+    height: 100%;
+  }
+</style>
+</head>
+<body>
+  <div id="sticker"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+  <script src="/duck-animation-data.js"></script>
+  <script>
+    if (window.duckAnimationData) {
+      lottie.loadAnimation({
+        container: document.getElementById('sticker'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        animationData: window.duckAnimationData
+      });
+    }
+  </script>
+</body>
+</html>

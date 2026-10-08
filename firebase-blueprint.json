@@ -1,0 +1,38 @@
+{
+  "entities": {
+    "Key": {
+      "title": "Access Key",
+      "description": "A single-device license access key with 7-day expiration",
+      "type": "object",
+      "properties": {
+        "keyName": {
+          "type": "string",
+          "description": "The exact valid key string"
+        },
+        "days": {
+          "type": "number",
+          "description": "The custom lease duration of the key in days (max 7 days)"
+        },
+        "deviceId": {
+          "type": "string",
+          "description": "Unique client hardware or browser device fingerprint"
+        },
+        "activatedAt": {
+          "type": "number",
+          "description": "Unix timestamp in ms when the key was activated on the device"
+        },
+        "expiresAt": {
+          "type": "number",
+          "description": "Unix timestamp in ms representing the absolute session limit"
+        }
+      },
+      "required": ["keyName", "days", "deviceId", "activatedAt", "expiresAt"]
+    }
+  },
+  "firestore": {
+    "keys/{keyId}": {
+      "schema": "Key",
+      "description": "Collection of activated or pre-commissioned license verification keys"
+    }
+  }
+}

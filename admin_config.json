@@ -1,0 +1,25 @@
+{
+  "adminPassword": "admin",
+  "telegramUrl": "https://t.me/+iLrgv9u-WbBlMTM9",
+  "announcementText": "🔥 DRAGO 4.0 TURBO SERVER IS LIVE & 99.8% ACCURATE! JOIN OUR OFFICIAL TELEGRAM FOR VIP SIGNALS.",
+  "isAnnouncementActive": true,
+  "minAccuracy": 95.5,
+  "maxAccuracy": 99.2,
+  "gameLinks": {
+    "sixclub": "https://6club.com",
+    "veergame": "https://veergame.com",
+    "dmfirst": "https://dmfirst.com",
+    "sreewin": "https://sreewin.com",
+    "bdgwin": "https://bdgwin.com",
+    "ninetyoneclub": "https://91club.com",
+    "goagame": "https://goagame.com",
+    "jaiclub": "https://jaiclub.com",
+    "jalwagame": "https://jalwagame.com",
+    "eightytwolottery": "https://82lottery.com",
+    "fiftyonegame": "https://51game.com",
+    "tiranga": "https://tiranga.com",
+    "yaarwin": "https://yaarwin.com"
+  },
+  "customKeys": [],
+  "customServerKeys": []
+}

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Donut The Dog Animated Sticker</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: transparent !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .donut-container {
+    width: 90vw;
+    height: 90vw;
+    max-width: 480px;
+    max-height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+  }
+
+  /* Natural animations */
+  @keyframes breathe {
+    0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
+    50% { transform: translateY(-8px) rotate(0.8deg) scale(1.02); }
+  }
+
+  @keyframes tailWag {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(18deg); }
+    75% { transform: rotate(-12deg); }
+  }
+
+  @keyframes earWiggleL {
+    0%, 100% { transform: rotate(0deg); }
+    30% { transform: rotate(-6deg); }
+    70% { transform: rotate(4deg); }
+  }
+
+  @keyframes earWiggleR {
+    0%, 100% { transform: rotate(0deg); }
+    35% { transform: rotate(6deg); }
+    75% { transform: rotate(-4deg); }
+  }
+
+  @keyframes pawBobL {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px) rotate(-2deg); }
+  }
+
+  @keyframes pawBobR {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px) rotate(2deg); }
+  }
+
+  @keyframes blink {
+    0%, 90%, 100% { opacity: 1; transform: scaleY(1); }
+    95% { opacity: 0; transform: scaleY(0.1); }
+  }
+
+  @keyframes blinkLine {
+    0%, 90%, 100% { opacity: 0; }
+    95% { opacity: 1; }
+  }
+
+  .donut-body {
+    animation: breathe 3.2s ease-in-out infinite;
+    transform-origin: center bottom;
+  }
+
+  .donut-tail {
+    animation: tailWag 1.3s ease-in-out infinite;
+    transform-origin: 420px 380px;
+  }
+
+  .donut-ear-l {
+    animation: earWiggleL 2.6s ease-in-out infinite;
+    transform-origin: 155px 190px;
+  }
+
+  .donut-ear-r {
+    animation: earWiggleR 2.8s ease-in-out infinite 0.2s;
+    transform-origin: 357px 190px;
+  }
+
+  .donut-paw-l {
+    animation: pawBobL 1.8s ease-in-out infinite;
+    transform-origin: 130px 330px;
+  }
+
+  .donut-paw-r {
+    animation: pawBobR 1.8s ease-in-out infinite 0.15s;
+    transform-origin: 382px 330px;
+  }
+
+  .eye-open {
+    animation: blink 3.5s infinite;
+    transform-origin: 256px 245px;
+  }
+
+  .eye-closed {
+    animation: blinkLine 3.5s infinite;
+  }
+</style>
+</head>
+<body>
+  <div class="donut-container" id="donutDog">
+    <svg viewBox="0 0 512 512" style="width:100%; height:100%; filter: drop-shadow(0 10px 24px rgba(0,0,0,0.3));" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="donutFur" x1="256" y1="120" x2="256" y2="460" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#FFAE42" />
+          <stop offset="45%" stop-color="#F89D35" />
+          <stop offset="100%" stop-color="#EB8820" />
+        </linearGradient>
+        <linearGradient id="donutHighlight" x1="256" y1="130" x2="256" y2="280" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#FFD39B" stop-opacity="0.8" />
+          <stop offset="100%" stop-color="#FFAE42" stop-opacity="0" />
+        </linearGradient>
+        <linearGradient id="donutCream" x1="256" y1="210" x2="256" y2="440" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#FFFDF7" />
+          <stop offset="60%" stop-color="#FFF2D6" />
+          <stop offset="100%" stop-color="#F9E2B8" />
+        </linearGradient>
+        <linearGradient id="donutPaw" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#DE621C" />
+          <stop offset="100%" stop-color="#B3440E" />
+        </linearGradient>
+        <linearGradient id="donutEar" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#B8440E" />
+          <stop offset="100%" stop-color="#8A2C08" />
+        </linearGradient>
+        <radialGradient id="blushGlow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#FF8FA3" stop-opacity="0.85" />
+          <stop offset="70%" stop-color="#FFA4B5" stop-opacity="0.45" />
+          <stop offset="100%" stop-color="#FFA4B5" stop-opacity="0" />
+        </radialGradient>
+      </defs>
+
+      <!-- Tail -->
+      <g class="donut-tail">
+        <path d="M400 340 C435 340 460 375 455 410 C450 440 420 455 390 448 C375 444 380 400 388 370 Z" fill="#D65818" stroke="#6B1C05" stroke-width="9" stroke-linejoin="round"/>
+        <path d="M410 355 C435 365 446 390 442 415 C438 430 422 438 405 435" stroke="#FFAE42" stroke-width="7" stroke-linecap="round"/>
+      </g>
+
+      <!-- Body / Head Animated Group -->
+      <g class="donut-body">
+        <!-- Main Silhouette -->
+        <path d="M 125 435 C 85 410, 80 345, 95 295 C 105 260, 125 210, 155 175 C 195 130, 317 130, 357 175 C 387 210, 407 260, 417 295 C 432 345, 427 410, 387 435 C 345 460, 165 460, 125 435 Z" fill="url(#donutFur)" stroke="#6B1C05" stroke-width="11" stroke-linejoin="round"/>
+        
+        <!-- Head Top Sheen -->
+        <path d="M 175 185 C 210 150, 302 150, 337 185 C 310 168, 202 168, 175 185 Z" fill="url(#donutHighlight)"/>
+
+        <!-- Left Ear -->
+        <g class="donut-ear-l">
+          <path d="M 130 250 C 115 210, 120 160, 155 155 C 185 150, 195 190, 195 235 C 175 255, 145 260, 130 250 Z" fill="url(#donutEar)" stroke="#6B1C05" stroke-width="10" stroke-linejoin="round"/>
+          <path d="M 148 170 C 135 190, 140 225, 152 235 C 165 220, 172 195, 170 172 C 162 166, 153 166, 148 170 Z" fill="#FFAE42" stroke="#581303" stroke-width="6"/>
+        </g>
+
+        <!-- Right Ear -->
+        <g class="donut-ear-r">
+          <path d="M 382 250 C 397 210, 392 160, 357 155 C 327 150, 317 190, 317 235 C 337 255, 367 260, 382 250 Z" fill="url(#donutEar)" stroke="#6B1C05" stroke-width="10" stroke-linejoin="round"/>
+          <path d="M 364 170 C 377 190, 372 225, 360 235 C 347 220, 340 195, 342 172 C 350 166, 359 166, 364 170 Z" fill="#FFAE42" stroke="#581303" stroke-width="6"/>
+        </g>
+
+        <!-- Cream Face & Chest -->
+        <path d="M 125 435 C 110 380, 115 310, 138 270 C 155 240, 195 245, 230 252 C 246 255, 266 255, 282 252 C 317 245, 357 240, 374 270 C 397 310, 402 380, 387 435 C 345 460, 165 460, 125 435 Z" fill="url(#donutCream)" stroke="#6B1C05" stroke-width="9" stroke-linejoin="round"/>
+
+        <!-- Center Belly Cream -->
+        <path d="M 175 375 C 170 415, 185 450, 256 450 C 327 450, 342 415, 337 375 C 310 395, 202 395, 175 375 Z" fill="#FFFBF2"/>
+
+        <!-- Neck smile folds -->
+        <path d="M 215 318 C 235 330, 277 330, 297 318" stroke="#E5BA8A" stroke-width="5" stroke-linecap="round"/>
+        <path d="M 228 335 C 242 342, 270 342, 284 335" stroke="#E5BA8A" stroke-width="4" stroke-linecap="round"/>
+
+        <!-- Blush Cheeks -->
+        <ellipse cx="178" cy="272" rx="24" ry="17" fill="url(#blushGlow)"/>
+        <ellipse cx="334" cy="272" rx="24" ry="17" fill="url(#blushGlow)"/>
+
+        <!-- Eyebrows -->
+        <ellipse cx="212" cy="210" rx="18" ry="15" transform="rotate(-15 212 210)" fill="#D95F1E"/>
+        <ellipse cx="300" cy="210" rx="18" ry="15" transform="rotate(15 300 210)" fill="#D95F1E"/>
+
+        <!-- Open Eyes -->
+        <g class="eye-open">
+          <ellipse cx="205" cy="245" rx="9" ry="11" fill="#1A120E"/>
+          <circle cx="202" cy="241" r="3.2" fill="#FFFFFF"/>
+          <ellipse cx="307" cy="245" rx="9" ry="11" fill="#1A120E"/>
+          <circle cx="304" cy="241" r="3.2" fill="#FFFFFF"/>
+        </g>
+
+        <!-- Blinking Eyes Line -->
+        <g class="eye-closed" stroke="#1A120E" stroke-width="7" stroke-linecap="round">
+          <path d="M 194 246 C 200 252, 210 252, 216 246" />
+          <path d="M 296 246 C 302 252, 312 252, 318 246" />
+        </g>
+
+        <!-- Nose & Mouth -->
+        <path d="M 250 254 C 246 254, 245 264, 256 267 C 267 264, 266 254, 262 254 Z" fill="#18110D"/>
+        <path d="M 256 267 L 256 278 M 256 278 C 251 288, 238 286, 236 276 M 256 278 C 261 288, 274 286, 276 276" stroke="#18110D" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+        <!-- Left Paw -->
+        <g class="donut-paw-l">
+          <path d="M 130 330 C 125 355, 140 378, 172 376 C 198 374, 210 355, 202 338 C 185 328, 150 320, 130 330 Z" fill="url(#donutPaw)" stroke="#6B1C05" stroke-width="9" stroke-linejoin="round"/>
+          <path d="M 148 358 C 158 368, 168 368, 185 363" stroke="#6B1C05" stroke-width="4.5" stroke-linecap="round"/>
+        </g>
+
+        <!-- Right Paw -->
+        <g class="donut-paw-r">
+          <path d="M 382 330 C 387 355, 372 378, 340 376 C 314 374, 302 355, 310 338 C 327 328, 362 320, 382 330 Z" fill="url(#donutPaw)" stroke="#6B1C05" stroke-width="9" stroke-linejoin="round"/>
+          <path d="M 364 358 C 354 368, 344 368, 327 363" stroke="#6B1C05" stroke-width="4.5" stroke-linecap="round"/>
+        </g>
+
+        <path d="M 125 435 C 165 460, 345 460, 387 435" stroke="#6B1C05" stroke-width="11" stroke-linecap="round"/>
+      </g>
+    </svg>
+  </div>
+</body>
+</html>
